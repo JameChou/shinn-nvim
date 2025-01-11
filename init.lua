@@ -1,5 +1,8 @@
+-- Load keymaps configuration file.
 require 'shinn.configs.keymaps'
+-- Load vim option configuration file.
 require 'shinn.configs.options'
+
 -- Highlight when yanking (copying) text
 --  Try it with `yap` in normal mode
 --  See `:help vim.highlight.on_yank()`
@@ -43,6 +46,7 @@ require('lazy').setup({
   -- require 'kickstart.plugins.debug',
   -- require 'kickstart.plugins.indent_line',
   -- require 'kickstart.plugins.lint',
+  require 'shinn.plugins.vim-table-mode',
   require 'shinn.plugins.git',
   require 'shinn.plugins.vim-lsp',
   require 'shinn.plugins.fuzz-finder',
@@ -79,6 +83,3 @@ require('lazy').setup({
     },
   },
 })
-
--- The line beneath this is called `modeline`. See `:help modeline`
--- vim: ts=2 sts=2 sw=2 et
