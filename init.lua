@@ -65,6 +65,7 @@ require('lazy').setup({
   require 'shinn.plugins.todo-comments',
   require 'shinn.plugins.nvim-treesitter',
   require 'shinn.plugins.vim-instant-markdown',
+  require 'shinn.plugins.comment',
   require 'kickstart.plugins.autopairs',
   require 'kickstart.plugins.neo-tree',
   -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
