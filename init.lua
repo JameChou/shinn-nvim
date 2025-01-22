@@ -68,6 +68,7 @@ require('lazy').setup({
   require 'shinn.plugins.comment',
   require 'shinn.plugins.winbar',
   require('shinn.plugins.vista').Config,
+  require('shinn.plugins.dap').Config,
   require 'kickstart.plugins.autopairs',
   require 'kickstart.plugins.neo-tree',
   -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
