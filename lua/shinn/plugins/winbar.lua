@@ -2,9 +2,9 @@ return {
   'Bekaboo/dropbar.nvim',
   config = function()
     local api = require 'dropbar.api'
-    vim.keymap.set('n', '<Leader>;', api.pick)
-    vim.keymap.set('n', '[c', api.goto_context_start)
-    vim.keymap.set('n', ']c', api.select_next_context)
+    vim.keymap.set('n', '<Leader>;', api.pick, { desc = 'Open the WinBar' })
+    vim.keymap.set('n', '[c', api.goto_context_start, { desc = 'Goto the context start' })
+    vim.keymap.set('n', ']c', api.select_next_context, { desc = 'Select next context' })
 
     local confirm = function()
       local menu = api.get_current_dropbar_menu()

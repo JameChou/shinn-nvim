@@ -67,6 +67,7 @@ require('lazy').setup({
   require 'shinn.plugins.vim-instant-markdown',
   require 'shinn.plugins.comment',
   require 'shinn.plugins.winbar',
+  require 'shinn.plugins.easy-align',
   require('shinn.plugins.vista').Config,
   require('shinn.plugins.dap').Config,
   require 'kickstart.plugins.autopairs',

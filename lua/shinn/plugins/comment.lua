@@ -22,6 +22,6 @@ return {
     mappings = {
       basic = true,
       extra = true,
-    }
+    },
   },
 }
