@@ -3,25 +3,6 @@ require 'shinn.configs.keymaps'
 -- Load vim option configuration file.
 require 'shinn.configs.options'
 
--- Sync clipboard between OS and Neovim.
---  Schedule the setting after `UiEnter` because it can increase startup-time.
---  Remove this option if you want your OS clipboard to remain independent.
---  See `:help 'clipboard'`
-vim.schedule(function()
-  vim.opt.clipboard = 'unnamedplus'
-end)
-
--- Highlight when yanking (copying) text
---  Try it with `yap` in normal mode
---  See `:help vim.highlight.on_yank()`
-vim.api.nvim_create_autocmd('TextYankPost', {
-  desc = 'Highlight when yanking (copying) text',
-  group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
-  callback = function()
-    vim.highlight.on_yank()
-  end,
-})
-
 -- [[ Install `lazy.nvim` plugin manager ]]
 --    See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
@@ -42,14 +23,8 @@ require('lazy').setup({
   -- luvit-meta
   { 'Bilal2453/luvit-meta', lazy = true },
 
-  {
-    'folke/tokyonight.nvim',
-    priority = 1000, -- Make sure to load this before all the other start plugins.
-    init = function()
-      vim.cmd.colorscheme 'tokyonight-moon'
-      vim.cmd.hi 'Comment gui=none'
-    end,
-  },
+  -- require 'shinn.plugins.themes.tokynight',
+  require 'shinn.plugins.themes.catppuccin',
 
   -- require 'kickstart.plugins.debug',
   -- require 'kickstart.plugins.indent_line',
@@ -68,6 +43,7 @@ require('lazy').setup({
   require 'shinn.plugins.comment',
   require 'shinn.plugins.winbar',
   require 'shinn.plugins.easy-align',
+  require 'shinn.plugins.dashboard',
   require('shinn.plugins.vista').Config,
   require('shinn.plugins.dap').Config,
   require 'kickstart.plugins.autopairs',
