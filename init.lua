@@ -23,8 +23,8 @@ require('lazy').setup({
   -- luvit-meta
   { 'Bilal2453/luvit-meta', lazy = true },
 
-  -- require 'shinn.plugins.themes.tokynight',
-  require 'shinn.plugins.themes.catppuccin',
+  require 'shinn.plugins.themes.tokynight',
+  -- require 'shinn.plugins.themes.catppuccin',
 
   -- require 'kickstart.plugins.debug',
   -- require 'kickstart.plugins.indent_line',
