@@ -10,6 +10,7 @@ inoremap <buffer> ,i ** <++><Esc>F*i
 inoremap <buffer> ,d `` <++><Esc>F`i
 inoremap <buffer> ,c ```<Enter><++><Enter>```<Enter><Enter><++><Esc>4kA
 inoremap <buffer> ,m - [ ] 
+inoremap <buffer> ,u <u></u> <++><Esc>2F>a
 inoremap <buffer> ,p ![](<++>) <++><Esc>F[a
 inoremap <buffer> ,a [](<++>) <++><Esc>F[a
 inoremap <buffer> ,1 #<Space><Enter><++><Esc>kA
