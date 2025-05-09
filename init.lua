@@ -49,7 +49,7 @@ require('lazy').setup({
   require('shinn.plugins.dap').Config,
   -- require 'shinn.plugins.neoscroll',
   require 'shinn.plugins.smear-cursor',
-  -- require 'shinn.plugins.nvim-java',
+  require 'shinn.plugins.nvim-java',
   require 'shinn.plugins.hlchunk',
   require 'kickstart.plugins.autopairs',
   require 'kickstart.plugins.neo-tree',
