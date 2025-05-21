@@ -48,9 +48,10 @@ require('lazy').setup({
   require('shinn.plugins.vista').Config,
   require('shinn.plugins.dap').Config,
   -- require 'shinn.plugins.neoscroll',
-  require 'shinn.plugins.smear-cursor',
+  -- require 'shinn.plugins.smear-cursor',
   require 'shinn.plugins.nvim-java',
   require 'shinn.plugins.hlchunk',
+  require 'shinn.plugins.flash',
   require 'kickstart.plugins.autopairs',
   require 'kickstart.plugins.neo-tree',
   -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
