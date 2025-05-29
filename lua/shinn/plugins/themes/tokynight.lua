@@ -14,7 +14,7 @@ return {
         -- Style to be applied to different syntax groups
         -- Value is any valid attr-list value for `:help nvim_set_hl`
         comments = { italic = false },
-        keywords = { italic = true },
+        keywords = { italic = true, bold = false },
         functions = {},
         variables = {},
         -- Background styles. Can be "dark", "transparent" or "normal"
@@ -23,7 +23,7 @@ return {
       },
       day_brightness = 0.3, -- Adjusts the brightness of the colors of the **Day** style. Number between 0 and 1, from dull to vibrant colors
       dim_inactive = false, -- dims inactive windows
-      lualine_bold = false, -- When `true`, section headers in the lualine theme will be bold
+      lualine_bold = true, -- When `true`, section headers in the lualine theme will be bold
 
       --- You can override specific color groups to use other groups or a hex color
       --- function will be called with a ColorScheme table
