@@ -7,6 +7,9 @@ return {
       flavour = 'mocha',
       styles = {
         comments = {
+          -- 'italic',
+        },
+        keywords = {
           'italic',
         },
       },
