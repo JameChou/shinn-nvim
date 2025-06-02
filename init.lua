@@ -54,6 +54,7 @@ require('lazy').setup({
   require 'shinn.plugins.flash',
   require 'shinn.plugins.lualine',
   require 'shinn.plugins.oil',
+  require 'shinn.plugins.yazi',
   require 'kickstart.plugins.autopairs',
   require 'kickstart.plugins.neo-tree',
   -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
