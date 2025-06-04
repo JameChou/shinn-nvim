@@ -44,10 +44,13 @@ return {
           },
         },
       },
+      ghost_text = { enabled = true },
     },
 
     sources = {
-      default = { 'lsp', 'path', 'snippets', 'buffer' },
+      -- don't use text completions
+      -- default = { 'lsp', 'path', 'snippets', 'buffer' },
+      default = { 'lsp', 'path', 'snippets' },
     },
 
     fuzzy = { implementation = 'prefer_rust_with_warning' },
