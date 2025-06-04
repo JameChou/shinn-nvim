@@ -57,6 +57,7 @@ require('lazy').setup({
   require 'shinn.plugins.autopairs',
   require 'shinn.plugins.neo-tree',
   require 'shinn.plugins.lsp-config',
+  require 'shinn.plugins.vim-visual-multi',
 }, {
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the
