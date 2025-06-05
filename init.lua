@@ -27,7 +27,6 @@ require('lazy').setup({
   require 'shinn.plugins.themes.catppuccin',
 
   require 'shinn.plugins.vim-table-mode',
-  require 'shinn.plugins.git',
   require 'shinn.plugins.vim-lsp',
   require 'shinn.plugins.telescope',
   require 'shinn.plugins.auto-format',
