@@ -8,10 +8,12 @@ return {
   opts = {
     keymap = {
       preset = 'default',
-      ['<C-l>'] = { 'snippet_forward', 'fallback' },
+      ['<Tab>'] = { 'snippet_forward', 'fallback' },
+      -- ['<C-l>'] = { 'snippet_forward', 'fallback' },
       ['<C-h>'] = { 'snippet_backward', 'fallback' },
       -- ctrl + / for the documentation
       ['<C-_>'] = { 'show', 'show_documentation', 'hide_documentation' },
+      -- ['<CR>'] = { 'accept', 'fallback' },
     },
 
     appearance = {
