@@ -30,6 +30,7 @@ require('lazy').setup({
 
   -- theme configuration begins
   require 'shinn.plugins.themes.catppuccin',
+  require 'shinn.plugins.themes.tokynight',
 
   -- my plugins
   require 'shinn.plugins.vim-table-mode',
@@ -58,6 +59,7 @@ require('lazy').setup({
   require 'shinn.plugins.nvim-treesitter',
   require 'shinn.plugins.vim-visual-multi',
   require 'shinn.plugins.snacks',
+  require 'shinn.plugins.noice',
 }, {
   ui = {
     icons = vim.g.have_nerd_font and {} or {

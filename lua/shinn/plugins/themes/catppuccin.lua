@@ -5,7 +5,7 @@ return {
   config = function()
     require('catppuccin').setup {
       flavour = 'mocha',
-      styles = { -- Handles the styles of general hi groups (see `:h highlight-args`):
+      styles = {       -- Handles the styles of general hi groups (see `:h highlight-args`):
         comments = {}, -- Change the style of comments
         conditionals = {},
         loops = {},
