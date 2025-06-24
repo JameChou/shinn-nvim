@@ -3,8 +3,6 @@ require 'shinn.configs.keymaps'
 -- Load vim option configuration file.
 require 'shinn.configs.options'
 
--- [[ Install `lazy.nvim` plugin manager ]]
---    See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
   local lazyrepo = 'https://github.com/folke/lazy.nvim.git'
@@ -17,36 +15,38 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Lazy options
 require('lazy').setup({
-  -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
   'tpope/vim-sleuth',
 
   -- luvit-meta
   { 'Bilal2453/luvit-meta', lazy = true },
 
   -- require 'shinn.plugins.themes.tokynight',
+  -- require 'shinn.plugins.telescope',
+  -- require 'shinn.plugins.cmp',
+  -- require 'shinn.plugins.fzf',
+  -- require 'shinn.plugins.neoscroll',
+  -- require 'shinn.plugins.smear-cursor',
+  -- require 'shinn.plugins.neo-tree',
+
+  -- theme configuration begins
   require 'shinn.plugins.themes.catppuccin',
 
+  -- my plugins
   require 'shinn.plugins.vim-table-mode',
   require 'shinn.plugins.vim-lsp',
-  require 'shinn.plugins.telescope',
   require 'shinn.plugins.auto-format',
   require 'shinn.plugins.which-keys',
-  -- require 'shinn.plugins.cmp',
   require 'shinn.plugins.blink-cmp',
   require 'shinn.plugins.mini',
   require 'shinn.plugins.todo-comments',
-  require 'shinn.plugins.nvim-treesitter',
   require 'shinn.plugins.markdown-view',
   require 'shinn.plugins.comment',
   require 'shinn.plugins.winbar',
   require 'shinn.plugins.easy-align',
   require 'shinn.plugins.dashboard',
-  require 'shinn.plugins.fzf',
   require('shinn.plugins.vista').Config,
   require('shinn.plugins.dap').Config,
   require 'shinn.plugins.gitsigns',
-  -- require 'shinn.plugins.neoscroll',
-  -- require 'shinn.plugins.smear-cursor',
   require 'shinn.plugins.nvim-java',
   require 'shinn.plugins.hlchunk',
   require 'shinn.plugins.flash',
@@ -54,13 +54,12 @@ require('lazy').setup({
   require 'shinn.plugins.oil',
   require 'shinn.plugins.yazi',
   require 'shinn.plugins.autopairs',
-  require 'shinn.plugins.neo-tree',
   require 'shinn.plugins.lsp-config',
+  require 'shinn.plugins.nvim-treesitter',
   require 'shinn.plugins.vim-visual-multi',
+  require 'shinn.plugins.snacks',
 }, {
   ui = {
-    -- If you are using a Nerd Font: set icons to an empty table which will use the
-    -- default lazy.nvim defined Nerd Font icons, otherwise define a unicode icons table
     icons = vim.g.have_nerd_font and {} or {
       cmd = '⌘',
       config = '🛠',
