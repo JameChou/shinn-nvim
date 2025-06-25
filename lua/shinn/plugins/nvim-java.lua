@@ -1,11 +1,3 @@
--- return {
---   'nvim-java/nvim-java',
---   config = function()
---     require('java').setup()
---     require('lspconfig').jdtls.setup {}
---   end,
--- }
-
 -- java jdtls simple configuration
 return {
   'mfussenegger/nvim-jdtls',

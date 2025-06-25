@@ -2,6 +2,7 @@
 require 'shinn.configs.keymaps'
 -- Load vim option configuration file.
 require 'shinn.configs.options'
+require 'shinn.configs.lsp'
 
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
@@ -16,6 +17,7 @@ vim.opt.rtp:prepend(lazypath)
 -- Lazy options
 require('lazy').setup({
   'tpope/vim-sleuth',
+  'neovim/nvim-lspconfig',
 
   -- luvit-meta
   { 'Bilal2453/luvit-meta', lazy = true },
@@ -55,7 +57,8 @@ require('lazy').setup({
   require 'shinn.plugins.oil',
   require 'shinn.plugins.yazi',
   require 'shinn.plugins.autopairs',
-  require 'shinn.plugins.lsp-config',
+  -- require 'shinn.plugins.lsp-config',
+  require 'shinn.plugins.mason',
   require 'shinn.plugins.nvim-treesitter',
   require 'shinn.plugins.vim-visual-multi',
   require 'shinn.plugins.snacks',
