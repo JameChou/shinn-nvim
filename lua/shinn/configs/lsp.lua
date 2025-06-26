@@ -55,7 +55,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
     -- Highlight words under cursor
     if client and client.supports_method(vim.lsp.protocol.Methods.textDocument_documentHighlight) and vim.bo.filetype ~= 'bigfile' then
-      local highlight_augroup = vim.api.nvim_create_augroup('shinn-lsp-config', { clear = false })
+      local highlight_augroup = vim.api.nvim_create_augroup('shinn-lsp-highlight', { clear = false })
       vim.api.nvim_create_autocmd({ 'CursorHold', 'CursorHoldI' }, {
         buffer = event.buf,
         group = highlight_augroup,
