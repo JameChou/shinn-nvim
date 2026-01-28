@@ -2,6 +2,7 @@ vim.lsp.enable 'lua_ls'
 vim.lsp.enable 'clangd'
 vim.lsp.enable 'pylsp'
 vim.lsp.enable 'java_language_server'
+vim.lsp.enable 'marksman'
 
 vim.lsp.config("vtsls", {
   filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
