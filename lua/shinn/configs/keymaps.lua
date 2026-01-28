@@ -38,3 +38,13 @@ vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left wind
 vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
+
+vim.keymap.set('n', '<leader>1', '1gt', { desc = "Change to 1 tab" })
+vim.keymap.set('n', '<leader>2', '2gt', { desc = "Change to 2 tab" })
+vim.keymap.set('n', '<leader>3', '3gt', { desc = "Change to 3 tab" })
+vim.keymap.set('n', '<leader>4', '4gt', { desc = "Change to 4 tab" })
+vim.keymap.set('n', '<leader>5', '5gt', { desc = "Change to 5 tab" })
+vim.keymap.set('n', '<leader>6', '6gt', { desc = "Change to 6 tab" })
+vim.keymap.set('n', '<leader>7', '7gt', { desc = "Change to 7 tab" })
+vim.keymap.set('n', '<leader>8', '8gt', { desc = "Change to 8 tab" })
+vim.keymap.set('n', '<leader>9', '9gt', { desc = "Change to 9 tab" })
