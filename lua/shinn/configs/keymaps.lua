@@ -50,4 +50,13 @@ vim.keymap.set('n', '<leader>8', '8gt', { desc = "Change to 8 tab" })
 vim.keymap.set('n', '<leader>9', '9gt', { desc = "Change to 9 tab" })
 
 -- toggle markdown render view
-vim.keymap.set('n', '<leader>cm', '<cmd>RenderMarkdown buf_toggle<CR>', { desc = "Toggle render view" })
+vim.keymap.set('n', '<leader>cm',
+  function()
+    local value = require('render-markdown').get()
+    if value then
+      require('render-markdown').disable()
+    else
+      require('render-markdown').enable()
+    end
+  end
+  , { desc = "Toggle render view" })

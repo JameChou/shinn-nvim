@@ -4,6 +4,7 @@ end
 
 vim.b.did_my_ftplugin = true
 require("render-markdown").setup({
+	render_modes = true,
 	callout = {
 		abstract = {
 			raw = "[!ABSTRACT]",
