@@ -3,6 +3,7 @@
 
 return {
   'nvim-neo-tree/neo-tree.nvim',
+  enable = false,
   version = '*',
   dependencies = {
     'nvim-lua/plenary.nvim',

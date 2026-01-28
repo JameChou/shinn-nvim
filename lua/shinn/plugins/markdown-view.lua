@@ -2,6 +2,7 @@
 -- For `plugins/markview.lua` users.
 -- markdown preview in web
 return {
+  enable = false,
   'iamcco/markdown-preview.nvim',
   cmd = { 'MarkdownPreviewToggle', 'MarkdownPreview', 'MarkdownPreviewStop' },
   build = 'cd app && yarn install',

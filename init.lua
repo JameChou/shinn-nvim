@@ -39,12 +39,7 @@ require('lazy').setup({
   require 'shinn.plugins.auto-format',
   require 'shinn.plugins.which-keys',
   require 'shinn.plugins.blink-cmp',
-  require 'shinn.plugins.mini',
   require 'shinn.plugins.todo-comments',
-  -- markdown preview plugin
-  -- require 'shinn.plugins.markdown-view',
-  -- markdown render
-  require 'shinn.plugins.render-markdown',
   require 'shinn.plugins.comment',
   require 'shinn.plugins.winbar',
   require 'shinn.plugins.easy-align',
@@ -64,6 +59,8 @@ require('lazy').setup({
   require 'shinn.plugins.vim-visual-multi',
   require 'shinn.plugins.snacks',
   require 'shinn.plugins.noice',
+  require 'shinn.plugins.mini',
+  require 'shinn.plugins.render-markdown',
 }, {
   ui = {
     icons = vim.g.have_nerd_font and {} or {
