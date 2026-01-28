@@ -41,7 +41,10 @@ require('lazy').setup({
   require 'shinn.plugins.blink-cmp',
   require 'shinn.plugins.mini',
   require 'shinn.plugins.todo-comments',
-  require 'shinn.plugins.markdown-view',
+  -- markdown preview plugin
+  -- require 'shinn.plugins.markdown-view',
+  -- markdown render
+  require 'shinn.plugins.render-markdown',
   require 'shinn.plugins.comment',
   require 'shinn.plugins.winbar',
   require 'shinn.plugins.easy-align',
@@ -57,7 +60,6 @@ require('lazy').setup({
   require 'shinn.plugins.yazi',
   require 'shinn.plugins.autopairs',
   require 'shinn.plugins.lsp-config',
-  -- require 'shinn.plugins.mason',
   require 'shinn.plugins.nvim-treesitter',
   require 'shinn.plugins.vim-visual-multi',
   require 'shinn.plugins.snacks',

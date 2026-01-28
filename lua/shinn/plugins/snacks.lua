@@ -13,6 +13,10 @@ return {
       enabled = true,
       timeout = 3000,
     },
+    image = {
+      enabled = true,
+      doc = { enabled = true, inline = true, float = true, max_width = 50, max_height = 50 },
+    },
     picker = { enabled = true },
     quickfile = { enabled = true },
     scope = { enabled = true },
