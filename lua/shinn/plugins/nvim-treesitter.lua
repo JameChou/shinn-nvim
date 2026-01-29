@@ -6,7 +6,7 @@ return {
     require('nvim-treesitter').install({
       "c", "cpp", "cmake", "comment", "go", "java", "javascript",
       "jsx", "lua", "ledger", "markdown", "markdown_inline",
-      "python", "rust", "typescript", "tsx", "vim", "vue", "zsh"
+      "python", "rust", "typescript", "tsx", "vim", "vue", "zsh", "html", "yaml", "latex"
     })
 
     vim.api.nvim_create_autocmd("FileType", {
