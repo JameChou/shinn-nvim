@@ -44,6 +44,7 @@ return {
           "tailwindcss",
           "emmet_language_server",
           "lua_ls",
+          "marksman",
         },
         automatic_enable = true,
         automatic_installation = false,
