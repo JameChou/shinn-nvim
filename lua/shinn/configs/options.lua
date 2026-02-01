@@ -77,3 +77,37 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     vim.highlight.on_yank()
   end,
 })
+
+
+function my_tabline()
+  local s = ""
+  for i = 1, vim.fn.tabpagenr('$') do
+    -- 选中当前活跃的标签页
+    if i == vim.fn.tabpagenr() then
+      s = s .. '%#TabLineSel#'
+    else
+      s = s .. '%#TabLine#'
+    end
+
+    -- 设置标签页序号 (从 1 开始)
+    s = s .. ' ' .. i .. ':'
+
+    -- 获取当前标签页的窗口名称
+    local buflist = vim.fn.tabpagebuflist(i)
+    local winnr = vim.fn.tabpagewinnr(i)
+    local bufnr = buflist[winnr]
+    local bufname = vim.fn.bufname(bufnr)
+
+    if bufname ~= "" then
+      s = s .. ' ' .. vim.fn.fnamemodify(bufname, ':t') .. ' '
+    else
+      s = s .. ' [No Name] '
+    end
+  end
+
+  s = s .. '%#TabLineFill#'
+  return s
+end
+
+-- 应用自定义标签栏
+vim.opt.tabline = '%!v:lua.my_tabline()'
