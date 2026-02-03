@@ -79,7 +79,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 })
 
 
-function my_tabline()
+function number_tabline()
   local s = ""
   for i = 1, vim.fn.tabpagenr('$') do
     -- 选中当前活跃的标签页
@@ -110,4 +110,4 @@ function my_tabline()
 end
 
 -- 应用自定义标签栏
-vim.opt.tabline = '%!v:lua.my_tabline()'
+vim.opt.tabline = '%!v:lua.number_tabline()'
