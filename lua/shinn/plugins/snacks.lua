@@ -120,35 +120,6 @@ return {
         })
       end,
     },
-    {
-      "<leader>sr",
-      desc = "Find Backlinks md",
-      function()
-        local filename = vim.fn.expand("%:t:r")
-
-        local pattern = "\\[\\[" .. filename .. "([\\|\\]#])"
-
-        -- 3. 调用 snacks.picker.grep
-        Snacks.picker.grep({
-          search = pattern,
-          regexp = true, -- 开启正则模式
-          title = "Backlinks: " .. filename,
-        })
-      end
-    },
-    {
-      "<leader>sy",
-      desc = "Find Links md",
-      function()
-        Snacks.picker.grep({
-          prompt = "Wiki Links",
-          search = "\\[\\[.*?\\]\\]", -- 匹配 [[任何内容]]
-          regex = true,
-          -- 限制只在当前文件中搜索
-          args = { "-g", vim.fn.expand("%:t") },
-        })
-      end
-    }
   },
   init = function()
     vim.api.nvim_create_autocmd("User", {

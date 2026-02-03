@@ -155,5 +155,4 @@ require("render-markdown").setup({
 	},
 })
 
-vim.lsp.enable 'marksman'
 vim.opt.conceallevel = 2

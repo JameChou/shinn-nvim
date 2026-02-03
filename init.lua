@@ -61,6 +61,7 @@ require('lazy').setup({
   require 'shinn.plugins.noice',
   require 'shinn.plugins.mini',
   require 'shinn.plugins.render-markdown',
+  require 'shinn.plugins.obsidian',
 }, {
   ui = {
     icons = vim.g.have_nerd_font and {} or {
