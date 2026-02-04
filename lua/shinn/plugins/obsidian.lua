@@ -83,6 +83,11 @@ return {
       desc = "Obsidian: Extract Note"
     },
     {
+      "<leader>ot",
+      ":Obsidian tags<cr>",
+      desc = "Obsidian: Tags"
+    },
+    {
       "<leader>ol",
       desc = "Obsidian: Find Links",
       function()
