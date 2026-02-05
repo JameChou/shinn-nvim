@@ -103,6 +103,11 @@ return {
         })
       end
     },
+    {
+      "<leader>oo",
+      ":Obsidian open<cr>",
+      desc = "Obsidian: Open File in Obsidian",
+    }
   },
 
 }
