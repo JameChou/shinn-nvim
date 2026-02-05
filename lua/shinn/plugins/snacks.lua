@@ -15,7 +15,22 @@ return {
     },
     image = {
       enabled = true,
-      doc = { enabled = true, inline = true, float = true, max_width = 50, max_height = 50 },
+      doc = { enabled = true, inline = false, float = true, max_width = 50, max_height = 50 },
+      math = {
+        latex = {
+          font_size = "huge",
+          tpl = [[
+        \documentclass[preview,border=0pt,varwidth,12pt]{standalone}
+        \usepackage{${packages}}
+        \usepackage{xcolor} % import color package
+        \begin{document}
+        ${header}
+        { \${font_size} \selectfont
+          \color[HTML]{ECEFF4} % set the color
+        ${content}}
+        \end{document}]],
+        },
+      },
     },
     picker = { enabled = true },
     quickfile = { enabled = true },
