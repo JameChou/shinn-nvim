@@ -136,6 +136,34 @@ return {
         })
       end,
     },
+    {
+      "<leader>fi",
+      function()
+        Snacks.picker.files({
+          title = "Images",
+          cmd = "fd",
+          args = { "--type", "f", "-e", "png", "-e", "jpg", "-e", "jpeg", "-e", "gif", "-e", "webp" },
+          layout = {
+            preset = "vertical",
+          },
+          win = {
+            preview = {
+              enabled = true,
+            }
+          },
+          actions = {
+            confirm = function(picker, item)
+              picker:close()
+              if item then
+                local path = item.file
+                vim.api.nvim_put({ path }, "c", false, true)
+              end
+            end,
+          },
+        })
+      end,
+      desc = "Find all image files"
+    }
   },
   init = function()
     vim.api.nvim_create_autocmd("User", {
