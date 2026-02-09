@@ -34,23 +34,23 @@ function key_module.key_set()
     require('dapui').close()
   end, { desc = 'Dap ui close' })
 
-  -- vim.keymap.set({ 'n', 'v' }, '<Leader>dh', function()
-  --   require('dap.ui.widgets').hover()
-  -- end, { desc = 'Dap ui hover' })
-  --
-  -- vim.keymap.set({ 'n', 'v' }, '<Leader>dp', function()
-  --   require('dap.ui.widgets').preview()
-  -- end, { desc = 'Dap ui preview' })
-  --
-  -- vim.keymap.set('n', '<Leader>df', function()
-  --   local widgets = require 'dap.ui.widgets'
-  --   widgets.centered_float(widgets.frames)
-  -- end, { desc = 'Dap ui center float [F]rames' })
-  --
-  -- vim.keymap.set('n', '<Leader>ds', function()
-  --   local widgets = require 'dap.ui.widgets'
-  --   widgets.centered_float(widgets.scopes)
-  -- end, { desc = 'Dap ui center float [S]cope' })
+  vim.keymap.set({ 'n', 'v' }, '<Leader>dh', function()
+    require('dap.ui.widgets').hover()
+  end, { desc = 'Dap ui hover' })
+
+  vim.keymap.set({ 'n', 'v' }, '<Leader>dp', function()
+    require('dap.ui.widgets').preview()
+  end, { desc = 'Dap ui preview' })
+
+  vim.keymap.set('n', '<Leader>df', function()
+    local widgets = require 'dap.ui.widgets'
+    widgets.centered_float(widgets.frames)
+  end, { desc = 'Dap ui center float [F]rames' })
+
+  vim.keymap.set('n', '<Leader>ds', function()
+    local widgets = require 'dap.ui.widgets'
+    widgets.centered_float(widgets.scopes)
+  end, { desc = 'Dap ui center float [S]cope' })
 end
 
 return key_module

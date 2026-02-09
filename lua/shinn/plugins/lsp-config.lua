@@ -34,7 +34,13 @@ return {
       "yioneko/nvim-vtsls",
       "nvim-lua/plenary.nvim",
     },
-    opts = {},
+    opts = {
+      servers = {
+        clangd = {
+          mason = false
+        }
+      }
+    },
     config = function()
       require("mason-lspconfig").setup({
         ensure_installed = {
@@ -44,7 +50,6 @@ return {
           "tailwindcss",
           "emmet_language_server",
           "lua_ls",
-          "clangd",
           "marksman",
         },
         automatic_enable = true,
