@@ -19,6 +19,7 @@ return {
           local items = {
             { text = "󰔚 Generate Project", cmd = "CMakeGenerate" },
             { text = "󰐊 Build", cmd = "CMakeBuild" },
+            { text = "󱌣 Build Current File", cmd = "CMakeBuildCurrentFile" },
             { text = "󱓞 Run", cmd = "CMakeRun" },
             { text = "󰙨 Debug", cmd = "CMakeDebug" },
             { text = " Debug Current File", cmd = "CMakeDebugCurrentFile" },
