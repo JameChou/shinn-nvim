@@ -8,9 +8,13 @@ function sign_module.set_sign()
   vim.fn.sign_define('DapStopped', {
     text = '➡️',
     texthl = 'DapStoppedSign',
-    linehl = 'DapStoppedLine', -- 整行暗红色背景
+    linehl = 'DapStoppedLine',
     numhl = ''
   })
+  vim.fn.sign_define(
+    'DapBreakpointCondition',
+    { text = '', texthl = 'DapBreakpointCondition', linehl = 'DapBreakpointCondition', numhl = 'DapBreakpointCondition' }
+  )
 end
 
 return sign_module

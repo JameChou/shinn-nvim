@@ -1,5 +1,6 @@
 return {
   'rcarriga/nvim-dap-ui',
+  dependencies = { 'mfussenegger/nvim-dap', 'theHamsta/nvim-dap-virtual-text', 'nvim-neotest/nvim-nio' },
   config = function()
     require('dapui').setup()
     local dap, dapui = require 'dap', require 'dapui'
@@ -14,6 +15,11 @@ return {
     end
     dap.listeners.before.event_exited.dapui_config = function()
       dapui.close()
+    end
+    require('nvim-dap-virtual-text').setup({}) -- optional
+    local ok, noice = pcall(require, 'noice')
+    if ok then
+      noice.setup()
     end
   end,
 }
