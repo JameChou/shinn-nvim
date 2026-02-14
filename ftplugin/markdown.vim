@@ -22,4 +22,4 @@ inoremap <buffer> ,q >[!note]<Enter><Esc>i
 " equation
 inoremap <buffer> ,e $$ <++><Esc>F$i
 " wiki link
-inoremap <buffer> ,z [[]]<++><Esc>F[a
+inoremap <buffer> ,z [[]] <++><Esc>F[a

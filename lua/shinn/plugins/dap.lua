@@ -6,7 +6,7 @@ DAP.Config = {
     -- dap ui
     require 'shinn.plugins.dap.nvim-dap-ui',
     { "jay-babu/mason-nvim-dap.nvim" },
-
+    require 'shinn.plugins.dap.nvim-dap-python',
   },
   config = function()
     -- load keymap settings
