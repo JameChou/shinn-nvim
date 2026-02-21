@@ -63,6 +63,7 @@ require('lazy').setup({
   require 'shinn.plugins.render-markdown',
   require 'shinn.plugins.obsidian',
   require 'shinn.plugins.cmake-tools',
+  require 'shinn.plugins.repl',
 }, {
   ui = {
     icons = vim.g.have_nerd_font and {} or {
