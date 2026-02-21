@@ -1,7 +1,10 @@
 vim.lsp.enable 'lua_ls'
 vim.lsp.enable 'clangd'
-vim.lsp.enable 'pylsp'
+-- python language server
+-- vim.lsp.enable 'pylsp'
+vim.lsp.enable 'pyright'
 vim.lsp.enable 'java_language_server'
+-- marksman for markdown lsp
 -- vim.lsp.enable 'marksman'
 
 vim.lsp.config("vtsls", {
