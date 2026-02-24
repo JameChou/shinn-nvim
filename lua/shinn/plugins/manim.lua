@@ -65,23 +65,30 @@ local function find_or_create_terminal()
       end
     end
     -- 没有窗口显示，创建新窗口
-    vim.cmd("botright vsplit | vertical resize 60")
+    local original_win = vim.api.nvim_get_current_win()
+    vim.cmd("botright split | vertical resize 30")
     local win = vim.api.nvim_get_current_win()
     vim.api.nvim_win_set_buf(win, manim_state.bufnr)
-    vim.cmd("wincmd p") -- 返回原窗口
+    vim.api.nvim_set_current_win(original_win) -- 返回原窗口
     return manim_state.bufnr, win
   end
 
+  -- 保存当前窗口引用
+  local original_win = vim.api.nvim_get_current_win()
+
   -- 创建新的 terminal
-  vim.cmd("botright vsplit | vertical resize 60")
-  local win = vim.api.nvim_get_current_win()
+  vim.cmd("botright split | vertical resize 30")
+  local term_win = vim.api.nvim_get_current_win()
   vim.cmd("terminal")
 
   manim_state.bufnr = vim.api.nvim_get_current_buf()
-  manim_state.job_id = vim.b.terminal_job_id
+  manim_state.job_id = vim.b[manim_state.bufnr].terminal_job_id
 
-  vim.cmd("wincmd p") -- 返回原窗口
-  return manim_state.bufnr, win
+  -- 确保返回原窗口并保持在 normal 模式
+  vim.api.nvim_set_current_win(original_win)
+  vim.cmd("stopinsert")
+
+  return manim_state.bufnr, term_win
 end
 
 ----------------------------------------------------------------
@@ -113,6 +120,9 @@ function M.run_scene()
     return
   end
 
+  -- 保存当前窗口引用
+  local original_win = vim.api.nvim_get_current_win()
+
   -- 保存文件
   vim.cmd("write")
 
@@ -140,16 +150,21 @@ function M.run_scene()
   -- 复制命令到剪贴板 (方便在外部终端使用)
   vim.fn.setreg("+", cmd .. " --prerun --finder -w")
 
-  find_or_create_terminal()
+  -- 创建或获取 terminal，并发送命令
+  local _, term_win = find_or_create_terminal()
   send_to_terminal(cmd, enter)
   manim_state.started = true
 
   if enter then
     -- 如果是 embedded 模式，保持焦点在编辑器
+    vim.api.nvim_set_current_win(original_win)
+    vim.cmd("stopinsert")
     vim.notify("ManimGL started: " .. scene .. " (embedded mode)", vim.log.levels.INFO)
   else
     -- 否则跳转到 terminal
-    vim.cmd("wincmd l")
+    if term_win and vim.api.nvim_win_is_valid(term_win) then
+      vim.api.nvim_set_current_win(term_win)
+    end
   end
 end
 

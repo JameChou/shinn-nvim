@@ -1,3 +1,4 @@
+
 -- Load keymaps configuration file.
 require 'shinn.configs.keymaps'
 -- Load vim option configuration file.
