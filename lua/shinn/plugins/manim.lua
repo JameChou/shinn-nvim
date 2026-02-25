@@ -285,7 +285,8 @@ function M.toggle_terminal()
 end
 
 ----------------------------------------------------------------
--- 发送选中的代码到 terminal (不使用 checkpoint)
+-- 发送选中的代码到 terminal (skip checkpoint，类似 3B1B super+ctrl+r)
+-- 复制到剪贴板，然后调用 checkpoint_paste(skip=True)
 ----------------------------------------------------------------
 function M.send_selection()
   local sel_lines
@@ -301,7 +302,10 @@ function M.send_selection()
   end
 
   if #sel_lines > 0 then
-    send_to_terminal(table.concat(sel_lines, "\n"))
+    -- 复制到剪贴板
+    vim.fn.setreg("+", table.concat(sel_lines, "\n"))
+    -- 发送 checkpoint_paste(skip=True)，不记录 checkpoint
+    send_to_terminal("checkpoint_paste(skip=True)")
   end
 end
 
