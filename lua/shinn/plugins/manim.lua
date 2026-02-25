@@ -66,7 +66,7 @@ local function find_or_create_terminal()
     end
     -- 没有窗口显示，创建新窗口
     local original_win = vim.api.nvim_get_current_win()
-    vim.cmd("botright split | vertical resize 30")
+    vim.cmd("botright vsplit | vertical resize 30")
     local win = vim.api.nvim_get_current_win()
     vim.api.nvim_win_set_buf(win, manim_state.bufnr)
     vim.api.nvim_set_current_win(original_win) -- 返回原窗口
@@ -77,7 +77,7 @@ local function find_or_create_terminal()
   local original_win = vim.api.nvim_get_current_win()
 
   -- 创建新的 terminal
-  vim.cmd("botright split | vertical resize 30")
+  vim.cmd("botright vsplit | vertical resize 30")
   local term_win = vim.api.nvim_get_current_win()
   vim.cmd("terminal")
 
