@@ -1,4 +1,3 @@
-
 -- Load keymaps configuration file.
 require 'shinn.configs.keymaps'
 -- Load vim option configuration file.
@@ -65,6 +64,7 @@ require('lazy').setup({
   require 'shinn.plugins.obsidian',
   require 'shinn.plugins.cmake-tools',
   require 'shinn.plugins.manim',
+  require 'shinn.plugins.copilot'
 }, {
   ui = {
     icons = vim.g.have_nerd_font and {} or {
