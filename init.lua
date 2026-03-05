@@ -64,7 +64,7 @@ require('lazy').setup({
   require 'shinn.plugins.cmake-tools',
   require 'shinn.plugins.manim',
   require 'shinn.plugins.copilot',
-  require 'shinn.plugins.aerial'
+  require 'shinn.plugins.aerial',
 }, {
   ui = {
     icons = vim.g.have_nerd_font and {} or {
