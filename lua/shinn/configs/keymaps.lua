@@ -54,3 +54,6 @@ vim.keymap.set('n', '<leader>6', '6gt', { desc = "Change to 6 tab" })
 vim.keymap.set('n', '<leader>7', '7gt', { desc = "Change to 7 tab" })
 vim.keymap.set('n', '<leader>8', '8gt', { desc = "Change to 8 tab" })
 vim.keymap.set('n', '<leader>9', '9gt', { desc = "Change to 9 tab" })
+
+vim.keymap.set('n', '<C-Space>b', 'gT', { desc = "Switch to previous tab" })
+vim.keymap.set('n', '<C-Space>m', 'gt', { desc = "Switch to next tab" })
