@@ -44,7 +44,6 @@ require('lazy').setup({
   require 'shinn.plugins.winbar',
   require 'shinn.plugins.easy-align',
   require 'shinn.plugins.dashboard',
-  require('shinn.plugins.vista').Config,
   require('shinn.plugins.dap').Config,
   require 'shinn.plugins.gitsigns',
   require 'shinn.plugins.nvim-java',
@@ -64,7 +63,8 @@ require('lazy').setup({
   require 'shinn.plugins.obsidian',
   require 'shinn.plugins.cmake-tools',
   require 'shinn.plugins.manim',
-  require 'shinn.plugins.copilot'
+  require 'shinn.plugins.copilot',
+  require 'shinn.plugins.aerial'
 }, {
   ui = {
     icons = vim.g.have_nerd_font and {} or {
