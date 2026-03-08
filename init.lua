@@ -27,7 +27,6 @@ require('lazy').setup({
   -- require 'shinn.plugins.fzf',
   -- require 'shinn.plugins.neoscroll',
   -- require 'shinn.plugins.smear-cursor',
-  -- require 'shinn.plugins.neo-tree',
 
   -- theme configuration begins
   require 'shinn.plugins.themes.catppuccin',
@@ -65,6 +64,8 @@ require('lazy').setup({
   require 'shinn.plugins.manim',
   require 'shinn.plugins.copilot',
   require 'shinn.plugins.aerial',
+  require 'shinn.plugins.tabby',
+  require 'shinn.plugins.neo-tree',
 }, {
   ui = {
     icons = vim.g.have_nerd_font and {} or {
