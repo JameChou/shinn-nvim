@@ -19,7 +19,11 @@ return {
     filesystem = {
       window = {
         mappings = {
-          ['<leader>e'] = 'close_window',
+          ['\\'] = 'close_window',
+          ['h'] = 'close_node',
+          ['l'] = 'open',
+          ['<C-s>'] = 'open_split',
+          ['<C-v>'] = 'open_vsplit',
         },
       },
     },
