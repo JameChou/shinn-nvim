@@ -1,6 +1,5 @@
 ----------------------------------------------------------------
--- ManimGL REPL 调试配置 (使用 Neovim 内置 Terminal)
--- 参考 3B1B sublime_custom_commands 工作流
+-- ManimGL REPL 调试配置
 ----------------------------------------------------------------
 
 local M = {}
@@ -58,7 +57,6 @@ end
 local function find_or_create_terminal()
   -- 如果已有 buffer 且有效
   if manim_state.bufnr and vim.api.nvim_buf_is_valid(manim_state.bufnr) then
-    -- 查找是否已有窗口显示该 buffer
     for _, win in ipairs(vim.api.nvim_list_wins()) do
       if vim.api.nvim_win_get_buf(win) == manim_state.bufnr then
         return manim_state.bufnr, win
@@ -107,8 +105,7 @@ local function send_to_terminal(cmd, enter)
 end
 
 ----------------------------------------------------------------
--- 运行场景 (Run Scene)
--- 类似 3B1B ManimRunScene
+-- 打开 ManimGL 场景
 ----------------------------------------------------------------
 function M.run_scene()
   local scene = get_current_scene_name()
@@ -170,7 +167,6 @@ end
 
 ----------------------------------------------------------------
 -- Checkpoint Paste
--- 类似 3B1B ManimCheckpointPaste
 ----------------------------------------------------------------
 function M.checkpoint_paste(opts)
   opts = opts or {}
@@ -240,7 +236,6 @@ end
 
 ----------------------------------------------------------------
 -- 退出 Manim
--- 类似 3B1B ManimExit
 ----------------------------------------------------------------
 function M.exit_manim()
   if manim_state.job_id then
@@ -285,7 +280,7 @@ function M.toggle_terminal()
 end
 
 ----------------------------------------------------------------
--- 发送选中的代码到 terminal (skip checkpoint，类似 3B1B super+ctrl+r)
+-- 发送选中的代码到 terminal (skip checkpoint)
 -- 复制到剪贴板，然后调用 checkpoint_paste(skip=True)
 ----------------------------------------------------------------
 function M.send_selection()
