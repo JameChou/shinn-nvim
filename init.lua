@@ -66,6 +66,7 @@ require('lazy').setup({
   require 'shinn.plugins.aerial',
   require 'shinn.plugins.tabby',
   require 'shinn.plugins.neo-tree',
+  require 'shinn.plugins.hydra',
 }, {
   ui = {
     icons = vim.g.have_nerd_font and {} or {
