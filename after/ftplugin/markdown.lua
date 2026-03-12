@@ -150,7 +150,7 @@ require("render-markdown").setup({
 	-- win_options = { concealcursor = { rendered = "nvc" } },
 	win_options = { concealcursor = { rendered = "vc" } },
 	completions = {
-		blink = { enabled = true },
+		blink = { enabled = false },
 		lsp = { enabled = true },
 	},
 })

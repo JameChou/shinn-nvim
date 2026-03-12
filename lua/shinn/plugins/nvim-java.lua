@@ -1,7 +1,7 @@
 -- java jdtls simple configuration
 return {
   'mfussenegger/nvim-jdtls',
-  dependencies = 'saghen/blink.cmp',
+  dependencies = 'hrsh7th/cmp-nvim-lsp',
   opts = {
     cmd = {
       vim.fn.expand '$HOME/.local/share/nvim/mason/bin/jdtls',
@@ -17,7 +17,7 @@ return {
       callback = function()
         -- prints and pcall are there only to give quick feedback if it works.
         -- print 'Starting JDTLS...'
-        opts.capabilities = require('blink-cmp').get_lsp_capabilities()
+        opts.capabilities = require('cmp_nvim_lsp').default_capabilities()
         local success, result = pcall(require('jdtls').start_or_attach, opts)
         if not success then
           print('Error starting JDTLS: ' .. tostring(result))

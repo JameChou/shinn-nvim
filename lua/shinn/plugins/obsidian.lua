@@ -20,8 +20,8 @@ return {
       },
     },
     completion = {
-      nvim_cmp = false,
-      blink = true,
+      nvim_cmp = true,
+      blink = false,
     }
   },
 

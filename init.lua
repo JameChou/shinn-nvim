@@ -37,7 +37,7 @@ require('lazy').setup({
   require 'shinn.plugins.vim-lsp',
   require 'shinn.plugins.auto-format',
   require 'shinn.plugins.which-keys',
-  require 'shinn.plugins.blink-cmp',
+  require 'shinn.plugins.cmp',
   require 'shinn.plugins.todo-comments',
   require 'shinn.plugins.comment',
   require 'shinn.plugins.winbar',
@@ -67,6 +67,7 @@ require('lazy').setup({
   require 'shinn.plugins.tabby',
   require 'shinn.plugins.neo-tree',
   require 'shinn.plugins.hydra',
+  -- require 'shinn.plugins.windows',
 }, {
   ui = {
     icons = vim.g.have_nerd_font and {} or {
