@@ -26,7 +26,7 @@ return {
         \begin{document}
         ${header}
         { \${font_size} \selectfont
-          \color[HTML]{ECEFF4} % set the color
+          \color[HTML]{D5C4A1} % set the color
         ${content}}
         \end{document}]],
         },

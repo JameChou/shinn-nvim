@@ -29,8 +29,10 @@ require('lazy').setup({
   -- require 'shinn.plugins.smear-cursor',
 
   -- theme configuration begins
+  require 'shinn.plugins.devicons',
   require 'shinn.plugins.themes.catppuccin',
   require 'shinn.plugins.themes.tokynight',
+  require 'shinn.plugins.themes.gruvbox',
 
   -- my plugins
   require 'shinn.plugins.vim-table-mode',
