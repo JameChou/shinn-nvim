@@ -5,7 +5,7 @@ return {
     local palette = require('gruvbox').palette
 
     require('gruvbox').setup({
-      terminal_colors = true, -- add neovim terminal colors
+      terminal_colors = false, -- add neovim terminal colors
       undercurl = true,
       underline = true,
       bold = true,
@@ -24,6 +24,9 @@ return {
       contrast = "",  -- can be "hard", "soft" or empty string
       palette_overrides = {},
       overrides = {
+        Normal = { fg = palette.light1, bg = palette.dark0 },
+        NormalNC = { fg = palette.light1, bg = palette.dark0 },
+        SignColumn = { bg = palette.dark0 },
         NormalFloat = { fg = palette.light1, bg = palette.dark0 },
         FloatBorder = { fg = palette.dark3, bg = palette.dark0 },
         FloatTitle = { fg = palette.bright_yellow, bg = palette.dark0, bold = true },
