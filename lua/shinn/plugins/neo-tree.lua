@@ -24,6 +24,20 @@ return {
           ['l'] = 'open',
           ['<C-s>'] = 'open_split',
           ['<C-v>'] = 'open_vsplit',
+          ["Y"] = function(state)
+            local node = state.tree:get_node()
+            vim.fn.setreg("+", node.name)
+          end,
+
+          ["gY"] = function(state)
+            local node = state.tree:get_node()
+            vim.fn.setreg("+", node:get_id())
+          end,
+
+          ["gy"] = function(state)
+            local node = state.tree:get_node()
+            vim.fn.setreg("+", vim.fn.fnamemodify(node:get_id(), ":."))
+          end,
         },
       },
     },
